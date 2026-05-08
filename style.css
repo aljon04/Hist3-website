@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f5f1ea;
-    color: #222;
+    background: #f9f7f2;
+    color: #2d3748;
     line-height: 1.8;
 }
 
@@ -23,7 +23,7 @@ body {
     left: 0;
     height: 4px;
     width: 0;
-    background: #d4af37;
+    background: #8b4513;
     z-index: 1001;
     transition: width 0.15s ease;
 }
@@ -66,14 +66,14 @@ nav ul li a::after {
     bottom: -4px;
     width: 100%;
     height: 2px;
-    background: #d4af37;
+    background: #8b4513;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.25s ease;
 }
 
 nav ul li a:hover {
-    color: #d4af37;
+    color: #8b4513;
 }
 
 nav ul li a:hover::after {
@@ -117,8 +117,8 @@ nav ul li a:hover::after {
 
 .btn {
     display: inline-block;
-    background: #d4af37;
-    color: black;
+    background: #8b4513;
+    color: white;
     padding: 14px 30px;
     border-radius: 5px;
     text-decoration: none;
@@ -202,14 +202,14 @@ nav ul li a:hover::after {
 .caption {
     margin-top: 20px;
     font-size: 0.9rem;
-    color: #777;
+    color: #718096;
     font-style: italic;
 }
 
 
 /* Reflection */
 .reflection {
-    background: #ece6dc;
+    background: #e8e3d8;
 }
 
 
@@ -288,11 +288,11 @@ footer {
     margin-bottom: 15px;
     font-size: 1.5rem;
     font-family: 'Playfair Display', serif;
-    color: #222;
+    color: #2d3748;
 }
 
 .immersion-link-card p {
-    color: #666;
+    color: #4a5568;
     line-height: 1.6;
 }
 
@@ -330,7 +330,7 @@ footer {
 }
 
 .alt-section {
-    background: #ece6dc;
+    background: #e8e3d8;
 }
 
 /* Gallery */
@@ -348,7 +348,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: 0.3s ease;
-    background: #f9f6f0;
+    background: #f9f7f2;
 }
 
 .gallery-item:hover {
@@ -421,7 +421,7 @@ footer {
 }
 
 .close-lightbox:hover {
-    color: #d4af37;
+    color: #8b4513;
 }
 
 .prev-button,
@@ -429,7 +429,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(212, 175, 55, 0.7);
+    background: rgba(139, 69, 19, 0.7);
     color: white;
     border: none;
     font-size: 30px;
@@ -441,7 +441,7 @@ footer {
 
 .prev-button:hover,
 .next-button:hover {
-    background: #d4af37;
+    background: #8b4513;
 }
 
 .prev-button {
@@ -499,9 +499,9 @@ footer {
     height: 400px;
     object-fit: contain;
     border-radius: 10px;
-    border: 3px solid #d4af37;
+    border: 3px solid #8b4513;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: #f9f6f0;
+    background: #f9f7f2;
     display: block;
     box-sizing: border-box;
 }
