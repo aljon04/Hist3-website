@@ -23,20 +23,20 @@ The HIST 3 Immersion project investigates how culture, power, identity, and hist
 
 ## Features
 
-**Interactive Elements**
+✨ **Interactive Elements**
 - Smooth scroll progress bar tracking page navigation
 - Interactive image gallery with lightbox viewer
 - Hover animations on navigation links and cards
 - Responsive design for all devices
 
-**Design & Layout**
+🎨 **Design & Layout**
 - Multi-line hero title: "Mapping Memory and Community"
 - Unique background images for each immersion section
 - Elegant card-based layout for content organization
 - Professional typography using Playfair Display and Poppins fonts
 - Golden accents (#d4af37) throughout the design
 
-Content Sections**
+📸 **Content Sections**
 - Dynamic image galleries with captions
 - Detailed immersion experiences with analysis
 - Citation and source management
