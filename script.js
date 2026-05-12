@@ -30,59 +30,62 @@ sections.forEach(section => {
 // Gallery lightbox functionality
 const galleryItems = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.querySelector('.lightbox-image');
-const closeLightbox = document.querySelector('.close-lightbox');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const lightboxCaption = document.querySelector('.lightbox-caption');
 
-let currentImageIndex = 0;
-const images = Array.from(galleryItems).map(item => ({
-    src: item.querySelector('img').src,
-    alt: item.querySelector('img').alt
-}));
+if (galleryItems.length > 0 && lightbox) {
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const closeLightbox = lightbox.querySelector('.close-lightbox');
+    const prevButton = lightbox.querySelector('.prev-button');
+    const nextButton = lightbox.querySelector('.next-button');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
 
-function openLightbox(index) {
-    currentImageIndex = index;
-    lightbox.classList.add('active');
-    updateLightboxImage();
-}
+    let currentImageIndex = 0;
+    const images = Array.from(galleryItems).map(item => ({
+        src: item.querySelector('img').src,
+        alt: item.querySelector('img').alt
+    }));
 
-function closeLightboxModal() {
-    lightbox.classList.remove('active');
-}
-
-function updateLightboxImage() {
-    lightboxImage.src = images[currentImageIndex].src;
-    lightboxImage.alt = images[currentImageIndex].alt;
-    lightboxCaption.textContent = images[currentImageIndex].alt;
-}
-
-function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    updateLightboxImage();
-}
-
-function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    updateLightboxImage();
-}
-
-// Event listeners for gallery
-galleryItems.forEach((item, index) => {
-    item.addEventListener('click', () => openLightbox(index));
-});
-
-closeLightbox.addEventListener('click', closeLightboxModal);
-prevButton.addEventListener('click', prevImage);
-nextButton.addEventListener('click', nextImage);
-
-// Close lightbox when clicking outside the image
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        closeLightboxModal();
+    function openLightbox(index) {
+        currentImageIndex = index;
+        lightbox.classList.add('active');
+        updateLightboxImage();
     }
-});
+
+    function closeLightboxModal() {
+        lightbox.classList.remove('active');
+    }
+
+    function updateLightboxImage() {
+        lightboxImage.src = images[currentImageIndex].src;
+        lightboxImage.alt = images[currentImageIndex].alt;
+        lightboxCaption.textContent = images[currentImageIndex].alt;
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateLightboxImage();
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateLightboxImage();
+    }
+
+    // Event listeners for gallery
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => openLightbox(index));
+    });
+
+    if (closeLightbox) closeLightbox.addEventListener('click', closeLightboxModal);
+    if (prevButton) prevButton.addEventListener('click', prevImage);
+    if (nextButton) nextButton.addEventListener('click', nextImage);
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightboxModal();
+        }
+    });
+}
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
@@ -91,6 +94,49 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') nextImage();
     if (e.key === 'Escape') closeLightboxModal();
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+}
+
+if (darkModeToggle) {
+    const enableDarkMode = () => {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀';
+        localStorage.setItem('darkMode', 'enabled');
+    };
+
+    const disableDarkMode = () => {
+        document.body.classList.remove('dark-mode');
+        darkModeToggle.textContent = '🌙';
+        localStorage.setItem('darkMode', 'disabled');
+    };
+
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'enabled') {
+        enableDarkMode();
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-mode')) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+}
 
 // Scroll progress bar (for pages with progress bar)
 const progressBar = document.getElementById('scroll-progress');
