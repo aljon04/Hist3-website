@@ -462,7 +462,7 @@ footer {
     margin-bottom: 15px;
     font-size: 1.5rem;
     font-family: 'Playfair Display', serif;
-    color: #2d3748;
+    color: var(--text);
 }
 
 .immersion-link-card p {
@@ -541,7 +541,7 @@ footer {
 }
 
 .alt-section {
-    background: #e8e3d8;
+    background: var(--surface-alt);
 }
 
 /* Gallery */
@@ -559,7 +559,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: 0.3s ease;
-    background: #f9f7f2;
+    background: var(--bg);
 }
 
 .gallery-item:hover {
@@ -702,7 +702,7 @@ footer {
     justify-content: center;
     gap: 20px;
     min-width: 0;
-    background: white;
+    background: var(--surface);
     padding: 32px;
     border-radius: 18px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
@@ -710,7 +710,7 @@ footer {
 }
 
 .detail-text p {
-    color: #4a5568;
+    color: var(--muted);
     line-height: 1.8;
     margin-bottom: 0;
 }
@@ -736,7 +736,7 @@ footer {
     border-radius: 16px;
     border: 3px solid #8b4513;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: #f9f7f2;
+    background: var(--bg);
     display: block;
     box-sizing: border-box;
 }
