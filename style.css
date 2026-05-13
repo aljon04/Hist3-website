@@ -365,6 +365,16 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .detail-image {
+        min-width: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .detail-text {
+        padding: 28px;
+    }
+
     .section {
         padding: 80px 6%;
     }
@@ -506,8 +516,8 @@ footer {
 /* Unique background images for each immersion page */
 .subpage-hero-community {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 41.jpg');
-    background-size: contain;
-    background-position:  center;
+    background-size: cover;
+    background-position: center;
 }
 
 .subpage-hero-labor {
