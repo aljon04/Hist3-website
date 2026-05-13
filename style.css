@@ -442,6 +442,33 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .detail-grid {
+        display: block;
+    }
+
+    .detail-text,
+    .detail-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .detail-text {
+        border-left: none;
+        border-top: 6px solid #8b4513;
+        padding: 28px 22px;
+    }
+
+    .detail-image {
+        min-width: 0;
+        padding: 0;
+        aspect-ratio: auto;
+        margin-bottom: 30px;
+    }
+
+    .real-image {
+        height: auto;
+    }
+
 }
 
 /* IMMERSION NAVIGATION CARDS */
