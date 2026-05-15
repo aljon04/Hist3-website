@@ -28,6 +28,25 @@ sections.forEach(section => {
 });
 
 // Gallery lightbox functionality
+document.querySelectorAll('.gallery[data-gallery-source]').forEach(gallery => {
+    const sourceId = gallery.dataset.gallerySource;
+    const source = document.getElementById(sourceId);
+
+    if (!source) return;
+
+    try {
+        const images = JSON.parse(source.textContent);
+
+        gallery.innerHTML = images.map((image, index) => `
+            <div class="gallery-item" data-gallery="${index}">
+                <img src="${image.src}" alt="${image.alt}" class="gallery-thumbnail">
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error(`Gallery image list "${sourceId}" is not valid JSON.`, error);
+    }
+});
+
 const galleryItems = document.querySelectorAll('.gallery-item');
 const lightbox = document.getElementById('lightbox');
 
@@ -85,15 +104,15 @@ if (galleryItems.length > 0 && lightbox) {
             closeLightboxModal();
         }
     });
-}
 
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
-    if (e.key === 'ArrowLeft') prevImage();
-    if (e.key === 'ArrowRight') nextImage();
-    if (e.key === 'Escape') closeLightboxModal();
-});
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'Escape') closeLightboxModal();
+    });
+}
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');

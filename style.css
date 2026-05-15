@@ -513,10 +513,11 @@ footer {
     height: 50vh;
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1974&auto=format&fit=crop');
+        url('images/image 64.png');
 
     background-size: cover;
     background-position: center;
+    
 
     display: flex;
     justify-content: center;
@@ -543,8 +544,9 @@ footer {
 /* Unique background images for each immersion page */
 .subpage-hero-community {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 41.JPG');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto;
+    background-position: center 20%;
+    background-repeat: no-repeat;
 }
 
 .subpage-hero-labor {
@@ -572,7 +574,7 @@ footer {
 }
 
 .subpage-hero-reflection {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507842507881-c4a1e30f1f80?q=80&w=1974&auto=format&fit=crop');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 52.png');
     background-size: cover;
     background-position: center;
 }
