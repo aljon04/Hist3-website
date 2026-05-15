@@ -156,7 +156,7 @@ nav ul li a:hover::after {
     height: 100vh;
     background:
         linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-        url('images/image 29.jpg');
+        url('images/image 29.JPG');
 
     background-size: cover;
     background-position: center;
@@ -542,31 +542,31 @@ footer {
 
 /* Unique background images for each immersion page */
 .subpage-hero-community {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 41.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 41.JPG');
     background-size: cover;
     background-position: center;
 }
 
 .subpage-hero-labor {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 59.png');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 59.PNG');
     background-size: cover;
     background-position: center;
 }
 
 .subpage-hero-culture {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 70.png');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 70.PNG');
     background-size: cover;
     background-position: top 80%;
 }
 
 .subpage-hero-landscape {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 45.png ');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 45.PNG ');
     background-size: cover;
     background-position: center 60%;
 }
 
 .subpage-hero-mobility {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 58.png');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/image 58.PNG');
     background-size: cover;
     background-position: center 65%;
 }
