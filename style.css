@@ -618,6 +618,15 @@ footer {
     filter: brightness(0.9);
 }
 
+.gallery-caption {
+    margin: 0;
+    padding: 12px 14px 14px;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
 /* Lightbox */
 .lightbox {
     display: none;
