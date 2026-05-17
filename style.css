@@ -156,7 +156,7 @@ nav ul li a:hover::after {
     height: 100vh;
     background:
         linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-        url('images/image 29.jpg');
+        url('images/image 31.jpg');
 
     background-size: cover;
     background-position: center;
